@@ -110,8 +110,11 @@ class MainProgram {
         // 1, 3, 4, 8, 3, 7, 2
         int max = array[0];
         for(int i = 0; i < array.length; i++){
-            if()
+            if(array[i] > max){
+                max = array[i];
+            };
         }
+        return max;
     }
 
 
@@ -121,13 +124,33 @@ class MainProgram {
      * übergeben bekommt und die den Index des größten Werts in diesem Array zurückgibt.
      * Tipp: Versuchen Sie, mit einem Durchlauf durch das Array zu kommen.
      */
-
+    private static int findMaximumIndex(int[] array){
+        int max = array[0];
+        int index = 0;
+        for(int i = 0; i < array.length; i++){
+            if(array[i] > max){
+                max = array[i];
+                index = i;
+            }
+        }
+        return index;
+    }
 
 
     /** 6. Bestimmen der Häufigkeit des Maximums in einem Feld
      * Schreiben Sie eine Methode countMaximum, die ein Array des Typs int als Parameter
      * übergeben bekommt und die Häufigkeit der größten Zahl in diesem Array zurückgibt.
      */
+    private static int countMaximum(int[] array){
+        findMaximum(array);
+        int maxCount = 0;
+        for(int i = 0; i < array.length; i++){
+            if(array[i] == findMaximum(array)){
+                maxCount++;
+            }
+        }
+        return maxCount;
+    }
 
 
 
