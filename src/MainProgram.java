@@ -8,7 +8,7 @@ class MainProgram {
     private static int[] numbers;
 
     public static void main(String[] args){
-        withNegatives = false;
+        withNegatives = true;
         maxAbsolute = 100;
         numbers = new int[10];
         fillArray(numbers, withNegatives, maxAbsolute);
@@ -57,6 +57,9 @@ class MainProgram {
     private static int sumUp(int[] array){
         int result = 0;
         //Hier muss Quellcode ergänzt werden.
+        for (int i = 0; i < array.length; i++){
+            result += array[i]; // += ist einfach result = result + array[i]
+        }
         return result;
     }
 
@@ -70,6 +73,11 @@ class MainProgram {
     private static int countNegatives(int[] array){
         int result = 0;
         //Hier muss Quellcode ergänzt werden.
+        for(int i = 0; i < array.length; i++){
+            if(array[i] < 0){
+                result++; //result = result + 1
+            }
+        }
         return result;
     }
 
@@ -83,6 +91,11 @@ class MainProgram {
     private static int sumUpNegatives(int[] array){
         int result = 0;
         //Hier muss Quellcode ergänzt werden.
+        for(int i = 0; i < array.length; i++){
+            if(array[i] < 0){
+                result += array[i];
+            }
+        }
         return result;
     }
 
@@ -93,6 +106,13 @@ class MainProgram {
      * übergeben bekommt und die den größten Wert in diesem Array zurückgibt.
      * Tipp: Versuchen Sie, mit einem Durchlauf durch das Array zu kommen.
      */
+    private static int findMaximum(int[] array){
+        // 1, 3, 4, 8, 3, 7, 2
+        int max = array[0];
+        for(int i = 0; i < array.length; i++){
+            if()
+        }
+    }
 
 
 
