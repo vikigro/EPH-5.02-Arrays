@@ -159,6 +159,14 @@ class MainProgram {
      * übergeben bekommt. Die Methode isSorted soll true zurückgeben, falls die im Array enthaltenen Werte aufsteigend sortiert sind.
      * Sonst soll false zurückgegeben werden.
      */
+    private static boolean isSorted(int[] array){
+        for(int i = 0; i < array.length - 1; i++) {
+            if (array[i] > array[i + 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 
 
@@ -169,6 +177,14 @@ class MainProgram {
      * ob es sich bei dem Array um ein Palindrom handelt.
      * Die Methode soll einen Wert des Typs boolean zurückgeben.
      */
+    private static boolean checkArray(int[] array){
+        for(int i = 0; i < array.length; i++){
+            if(array[i] != array[array.length - i - 1]){
+                return false;
+            }
+        }
+        return true;
+    }
 
 
 
@@ -178,6 +194,9 @@ class MainProgram {
      * Beispiel: Werden ein Array mit den Elementen 80,7,1,56,11,72,43,37 als erstes und der Wert 17 als zweites Argument übergeben,
      * so soll ein neues(!) Array mit den Werten 97,24,18,73,28,89,60,54 zurückgegeben werden.
      */
+    private static int[] increaseArray(int[] array, int amount){
+
+    }
 
 
 }
