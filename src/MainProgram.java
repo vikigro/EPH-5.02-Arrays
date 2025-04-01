@@ -195,7 +195,10 @@ class MainProgram {
      * so soll ein neues(!) Array mit den Werten 97,24,18,73,28,89,60,54 zurückgegeben werden.
      */
     private static int[] increaseArray(int[] array, int amount){
-
+        for(int i = 0; i < array.length; i++){
+            array[i] += amount;
+        }
+        return array;
     }
 
 
